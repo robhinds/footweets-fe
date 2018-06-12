@@ -4,14 +4,14 @@ export default class TweetDisplay extends Component {
 
   render() {
     return (
-      <blockquote className="tweet">
+      <div className="box sb1">
         <p className="content">
           { this.props.tweet }
         </p>
         <p className="author">
           <strong> @{ this.props.author } </strong>
         </p>
-      </blockquote>
+      </div>
     );
   }
 }

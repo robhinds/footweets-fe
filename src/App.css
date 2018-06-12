@@ -1,46 +1,70 @@
+.header {
+  grid-area: header;
+  min-height: 110px;
+  background-image: url("/header.jpg");
+}
+.stats {
+  grid-area: stats;
+}
+.conversations {
+  grid-area: conversations;
+}
+.latestTweets {
+  grid-area: latestTweets;
+}
+.footer {
+  grid-area: footer;
+}
+
 .App {
-  text-align: center;
   display: grid;
-  min-height: 100%;
+  grid-gap: 10px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "latestTweets stats conversations"
+    "footer  footer footer";
+  background-color: #fff;
+  color: #444;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.box {
+  width: auto;
+  margin: 50px 40px;
+  background: #00aced;
   padding: 20px;
-  color: white;
+  text-align: center;
+  color: #fff;
+  font-family: arial;
+  position:relative;
 }
 
-.App-title {
-  font-size: 1.5em;
+.sb1:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #00aced;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #00aced;
+  border-bottom: 10px solid transparent;
+  bottom: -20px;
+  left: 20px;
 }
 
-.App-intro {
-  font-size: large;
+.allCountryStats {
+  margin-top: 50px;
+  margin-right: 25px;
+  width: auto;
+  background: linear-gradient(#55efc4, #ff7675);
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-blockquote.tweet {
+div.countryStats {
   overflow: hidden;
   color: #1c2022;
-  background-color: #fff;
-  border: 1px solid #e1e8ed;
-  border-radius: 4px;
-  width: 500px;
+  width: auto;
   max-width: 100%;
   min-width: 220px;
-  padding: 1.25rem 1.25rem 0.725rem 1.25rem;
-}
-blockquote.tweet p {
-  white-space: pre-wrap;
-  font: 16px/1.4 Helvetica, Roboto, 'Sergoe UI', Calibri, sans-serif;
 }
