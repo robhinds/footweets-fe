@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import LatestTweets from './components/LatestTweets';
+import LatestTweetsContainer from './containers/LatestTweetsContainer';
 import './App.css';
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
           <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
-          <LatestTweets />
+          <LatestTweetsContainer />
         </main>
         <aside />
       </div>
